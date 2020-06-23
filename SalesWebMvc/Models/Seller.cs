@@ -29,7 +29,6 @@ namespace SalesWebMvc.Models
         [Display(Name = "Base Salary")]
         [DisplayFormat(DataFormatString = "{0:F2}")]*/
         public double BaseSalary { get; set; }
-
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
 
