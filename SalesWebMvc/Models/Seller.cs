@@ -9,23 +9,23 @@ namespace SalesWebMvc.Models
     {
         public int Id { get; set; }
 
-        /*[Required(ErrorMessage = "{0} required")]
-        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size should be between {2} and {1}")]*/
+        [Required(ErrorMessage = "{0} requerido")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} deve conter entre 1 e 60 caracteres")]
         public string Name { get; set; }
 
-        /*[Required(ErrorMessage = "{0} required")]*/
-        [EmailAddress(ErrorMessage = "Enter a valid email")]
+        [Required(ErrorMessage = "{0} requerido")]
+        [EmailAddress(ErrorMessage = "Digite um e-mail valido")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        /*[Required(ErrorMessage = "{0} required")]*/
+        [Required(ErrorMessage = "{0} requerido")]
         [Display(Name = "Birth Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
 
-        /*[Required(ErrorMessage = "{0} required")]
-        [Range(100.0, 50000.0, ErrorMessage = "{0} must be from {1} to {2}")]*/
+        [Required(ErrorMessage = "{0} requerido")]
+        [Range(100.0, 50000.0, ErrorMessage = "Valor de salario deve ser entre 100 e 50000")]
         [Display(Name = "Base Salary")]
         [DisplayFormat(DataFormatString = "R$ {0:F2}")]
         public double BaseSalary { get; set; }
